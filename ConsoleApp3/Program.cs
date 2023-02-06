@@ -7,7 +7,7 @@ namespace ConsoleApp3
     {
         static void Main(string[] args)
         {
-            int[] b = { 2, 5, 2, 6, 1, 7, 8, 1, 9, 6, 0, 7, 34, 61, 67, 12, 97, 34 };
+            int[] b = { 2, 5, 2, 6, 1, 7, 8, 1, 9, 6, 0, 7, 34, 61, 67, 12, 97, 34, 45 };
             int a = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine(IntToBinary(a));
             Console.WriteLine(IsEven(a));
@@ -15,6 +15,7 @@ namespace ConsoleApp3
             Console.WriteLine(Min(b));
             Console.WriteLine(Sum(b));
             Console.WriteLine(Average(b));
+            Console.WriteLine(Median(b));
         }
         public static string IntToBinary(int n)
         {
@@ -66,7 +67,7 @@ namespace ConsoleApp3
             }
             return n2;
         }
-        public static int Average(int[] n)
+        public static double Average(int[] n)
         {
             int n2 = 0;
             foreach (int i in n)
@@ -74,6 +75,15 @@ namespace ConsoleApp3
                 n2 += i;
             }
             return n2 /= n.Length;
+        }
+        public static double Median(int[] n)
+        {
+            Array.Sort(n);
+            if (n.Length % 2 == 0)
+            {
+            return (n[n.Length/2]+ n[n.Length/2-1])/2;
+            }
+            return n[n.Length / 2];
         }
     }
 }
