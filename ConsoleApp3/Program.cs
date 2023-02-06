@@ -16,7 +16,7 @@ namespace ConsoleApp3
             while(0<n)
             {
                 n2 += n % 2;
-                n/= 2;
+                n/= 3;
             }
             char[] charArray = n2.ToCharArray();
             Array.Reverse(charArray);
