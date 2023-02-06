@@ -8,7 +8,7 @@ namespace ConsoleApp3
         static void Main(string[] args)
         {
             int[] b = { 2, 5, 2, 6, 1, 7, 8, 1, 9, 6, 0, 7, 34, 61, 67, 12, 97, 34, 45 };
-            int a = Convert.ToInt32(Console.ReadLine());
+            int a = 123;
             Console.WriteLine(IntToBinary(a));
             Console.WriteLine(IsEven(a));
             Console.WriteLine(Max(b));
